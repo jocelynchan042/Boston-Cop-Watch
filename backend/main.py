@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from chatbot.chat import get_chat_response
 from chatbot.prompts import SUGGESTED_PROMPTS
+import time
 
 app = FastAPI()
 
@@ -29,5 +30,30 @@ def get_prompts():
     return SUGGESTED_PROMPTS
 
 @app.post("/api/chat")
-def chat(request: ChatRequest):
-    return get_chat_response(request.message, request.chat_history)
+def api_chat(req: ChatRequest):
+    start = time.time()
+
+    result = get_chat_response(req.message)
+
+    end = time.time()
+    print(f"/chat total seconds: {end - start:.2f}")
+
+    return result
+
+
+# import time
+
+# @app.post("api/chat")
+# def chat(req: ChatRequest):
+#     start = time.time()
+
+#     result = get_chat_response(req.message)
+
+#     end = time.time()
+#     print(f"/chat total seconds: {end - start:.2f}")
+
+#     return result
+
+# @app.post("/api/chat")
+# def chat(request: ChatRequest):
+#     return get_chat_response(request.message, request.chat_history)
