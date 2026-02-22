@@ -73,35 +73,36 @@ export default function QuickStats({zip}) {
                 </div>
 
                 <div style={{width: "100%", display:"flex", flexDirection:"column", gap:"3%"}}>
-
-                <div className="chart-card">
-                    <h3>All Boston Stops by Race (%) (2022-2025)</h3>
-                    <div className="chart-wrapper">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={raceData}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="race"
-                                       angle={-15}
-                                       textAnchor="end"
-                                       interval={0}
-                                       fontSize=".4rem"
-                                />
-                                <YAxis
-                                    domain={[0, 100]}
-                                    allowDataOverflow={false}
-                                />
-                                <Tooltip />
-                                <Legend />
-                                <Bar dataKey="percent"
-                                     name="Percent of Incidents"
-                                     fill="#1e3a8a"
-                                />
-                            </BarChart>
-                        </ResponsiveContainer>
+                    <div className="chart-card">
+                        <h3>All Boston Stops by Race (%) (2022-2025)</h3>
+                        <div className="chart-wrapper">
+                            <ResponsiveContainer width="100%" height="100%">
+                                <BarChart data={raceData}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis 
+                                        dataKey="race"
+                                        angle={-15}
+                                        textAnchor="end"
+                                        interval={0}
+                                        fontSize=".4rem"
+                                    />
+                                    <YAxis
+                                        domain={[0, 100]}
+                                        allowDataOverflow={false}
+                                    />
+                                    <Tooltip />
+                                    <Legend />
+                                    <Bar 
+                                        dataKey="percent"
+                                        name="Percent of Incidents"
+                                        fill="#1e3a8a"
+                                    />
+                                </BarChart>
+                            </ResponsiveContainer>
+                        </div>
                     </div>
-                </div>
-                <br />
-                <br />
+                    <br />
+                    <br />
                     <div className="chart-card">
                         <h3>All Boston Juvenile Stops by Race (%) (2022-2025)</h3>
                         <div className="chart-wrapper">
