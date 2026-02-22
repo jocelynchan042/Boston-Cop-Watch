@@ -16,8 +16,8 @@ export default function BostonMap({ onZipSelect }) {
         <ComposableMap
             projection="geoMercator"
             projectionConfig={{
-                center: [-71.0589, 42.3101],
-                scale: 140000
+                center: [-71.0589, 42.301],
+                scale: 130000
             }}
         >
             <Geographies geography={geoUrl}>
