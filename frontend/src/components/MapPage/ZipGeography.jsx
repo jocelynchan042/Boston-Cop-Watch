@@ -15,54 +15,40 @@ export function ZipGeography({geo, selectedZip, onSelect}) {
 
     const getZipStyle = (zip, selectedZip) => (
         inBoston ?
-            {// in Boston
-                default: {
-                    fill: getFillColor(zip, selectedZip),
-                    outline: "none"
-                },
-                hover: {
-                    fill: "#93c5fd",
-                    outline: "none"
-                },
-                pressed: {
-                    fill: "#1d4ed8",
-                    outline: "none"
-                }
-            } : { // not in Boston
-                default: {
-                    fill: "#e5e7eb",
-                    outline: "none"
-                },
-                hover: {
-                    fill: "#e5e7eb",
-                    outline: "none",
-                },
-                pressed: {
-                    fill: "#e5e7eb",
-                    outline: "none"
-                }
+            {
+                default: { fill: getFillColor(zip, selectedZip), outline: "none" },
+                hover:   { fill: "#93c5fd", outline: "none" },
+                pressed: { fill: "#1d4ed8", outline: "none" }
+            } : {
+                default: { fill: "#e5e7eb", outline: "none" },
+                hover:   { fill: "#e5e7eb", outline: "none" },
+                pressed: { fill: "#e5e7eb", outline: "none" }
             }
     );
+
     return (
         <>
             <Geography
                 geography={geo}
                 onClick={() => inBoston ? onSelect(zip) : null}
                 stroke="#333"
-                strokeWidth={inBoston ? .9 : 0.1}
+                strokeWidth={inBoston ? 0.9 : 0.1}
                 style={getZipStyle(zip, selectedZip)}
             />
-            {inBoston ?
+            {inBoston && (
                 <Marker coordinates={centroid}>
                     <text
                         textAnchor="middle"
-                        fontSize="0.7em"
-                        fill="#000"
-                        style={{pointerEvents: "none"}}
+                        dominantBaseline="central"
+                        fontSize={6}
+                        fontWeight="500"
+                        fill={zip === selectedZip ? "#ffffff" : "#1e3a8a"}
+                        style={{ pointerEvents: "none", userSelect: "none" }}
                     >
                         {zip}
                     </text>
-                </Marker> : null}
+                </Marker>
+            )}
         </>
     );
 }

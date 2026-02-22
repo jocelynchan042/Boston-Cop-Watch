@@ -345,6 +345,30 @@ nav {
   white-space: nowrap;
 }
 
+/* Map page layout: map visible, stats scroll */
+.mapPageLayout {
+  flex: 1;
+  min-height: 0;              /* critical for nested flex scroll */
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.mapPanel {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;              /* critical */
+  display: flex;
+}
+
+.statsPanel {
+  width: 360px;               /* adjust if needed */
+  max-width: 40%;
+  min-height: 0;              /* critical */
+  overflow-y: auto;           /* scroll here */
+  padding-right: 8px;         /* prevents scrollbar overlay feel */
+}
+
 /* Footer */
 .footerLinks {
   width: 100%;

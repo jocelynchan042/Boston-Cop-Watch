@@ -1,16 +1,19 @@
-import BostonMap from "./BostonMap.jsx";
-import {useState} from "react";
+import { useState } from "react";
+import BostonMap from "./BostonMap";
 import QuickStats from "./QuickStats";
 
 export default function MapPage() {
-    const [selectedZip, setSelectedZip] = useState(null);
+  const [selectedZip, setSelectedZip] = useState(null);
 
-    return (
-        <div style={{ display: "flex", height:"100vh", gap:"2%", padding:"2%", paddingTop:"4%"}}>
-                <BostonMap onZipSelect={setSelectedZip} />
-            <div style={{width: "30%", height:"100%" }}>
-                <QuickStats zip={selectedZip} />
-            </div>
-        </div>
-    )
+  return (
+    <div className="mapPageLayout">
+      <div className="mapPanel">
+        <BostonMap onZipSelect={setSelectedZip} />
+      </div>
+
+      <div className="statsPanel">
+        <QuickStats zip={selectedZip} />
+      </div>
+    </div>
+  );
 }

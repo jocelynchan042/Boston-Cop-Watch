@@ -9,30 +9,26 @@ export default function BostonMap({ onZipSelect }) {
 
     const handleSelect = (zip) => {
         setSelectedZip(zip);
-            onZipSelect?.(zip);
+        onZipSelect?.(zip);
     };
 
     return (
-        <div style={{width: "60%", height:"87%", border: "5px solid lightblue", borderRadius: "12px", overflow: "hidden"}}>
-
-        <ComposableMap
-            projection="geoMercator"
-            projectionConfig={{
-                center: [-71.0589, 42.301],
-                scale: 130000
-            }}
-            style={{width: "100%", height:"100%"}}
-        >
-            <Geographies geography={geoUrl}>
-                {({ geographies }) => (
-                    <ZipLayer
-                        geographies={geographies}
-                        selectedZip={selectedZip}
-                        onSelect={handleSelect}
-                    />
-                )}
-            </Geographies>
-        </ComposableMap>
+        <div style={{ width: "100%", height: "100%", overflow: "hidden", borderRadius: 12, border: "5px solid lightblue" }}>
+            <ComposableMap
+                projection="geoMercator"
+                projectionConfig={{ center: [-71.0589, 42.301], scale: 130000 }}
+                style={{ width: "100%", height: "100%" }}
+            >
+                <Geographies geography={geoUrl}>
+                    {({ geographies }) => (
+                        <ZipLayer
+                            geographies={geographies}
+                            selectedZip={selectedZip}
+                            onSelect={handleSelect}
+                        />
+                    )}
+                </Geographies>
+            </ComposableMap>
         </div>
     );
 }
