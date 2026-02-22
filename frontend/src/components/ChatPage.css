@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0a120a; overflow: hidden; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-6px); }
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a3a2a; border-radius: 2px; }
+button:hover { opacity: 0.85; }
+
+.markdown p { margin: 0 0 8px; }
+.markdown ul, .markdown ol { margin: 0 0 8px 18px; }
+.markdown li { margin: 4px 0; }
+.markdown h1, .markdown h2, .markdown h3 { margin: 10px 0 6px; }
+.markdown a { color: #6a9a6a; text-decoration: underline; }
