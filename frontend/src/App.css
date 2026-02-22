@@ -44,7 +44,12 @@ html, body {
   width: 50%;
   display: flex;
   align-items: center;
-  gap: 7%;
+  gap: 3%;
+}
+nav {
+  display: flex;
+  width: 100%;
+  gap: 3%;
 }
 
 /* Make nav items transformable */
@@ -90,7 +95,7 @@ html, body {
 }
 
 .mapBtn {
-  font-size: 16px;
+  font-size: 1.4rem;
   background: #0b1f3a;
   color: #ffffff;
   border: 5px solid #2d5694;
@@ -100,6 +105,8 @@ html, body {
   font-family: 'DM Mono', monospace;
   margin-right: 8px;
   transition: transform 0.15s ease;
+  width: 10rem;
+  text-align: center;
 }
 
 .navBtn {

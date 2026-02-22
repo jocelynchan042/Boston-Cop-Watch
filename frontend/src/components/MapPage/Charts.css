@@ -1,13 +1,22 @@
 .chart-card {
-    background: white;
     padding: 1.5rem;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    margin-top: 2rem;
+    width: 100%;
+    height: 50%;
+    border: 2px solid lightblue;
+    background-color: floralwhite;
+
 }
 
 .chart-wrapper {
     width: 100%;
-    height: 300px;
-    min-height: 300px;
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 3rem;
+}
+p {
+    font-size: 1.2rem;
 }

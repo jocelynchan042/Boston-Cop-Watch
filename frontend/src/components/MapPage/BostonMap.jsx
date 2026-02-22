@@ -13,12 +13,15 @@ export default function BostonMap({ onZipSelect }) {
     };
 
     return (
+        <div style={{width: "60%", height:"87%", border: "5px solid lightblue", borderRadius: "12px", overflow: "hidden"}}>
+
         <ComposableMap
             projection="geoMercator"
             projectionConfig={{
                 center: [-71.0589, 42.301],
                 scale: 130000
             }}
+            style={{width: "100%", height:"100%"}}
         >
             <Geographies geography={geoUrl}>
                 {({ geographies }) => (
@@ -30,5 +33,6 @@ export default function BostonMap({ onZipSelect }) {
                 )}
             </Geographies>
         </ComposableMap>
+        </div>
     );
 }
