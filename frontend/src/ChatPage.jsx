@@ -345,10 +345,10 @@ const styles = {
     textTransform: "uppercase",
   },
   mapBtn: {
-    fontSize: "12px",
+    fontSize: "16px",
     background: "#0b1f3a",
     color: "#ffffff",
-    border: "1px solid #142f57",
+    border: "5px solid #2d5694",
     borderRadius: "4px",
     padding: "6px 12px",
     cursor: "pointer",
