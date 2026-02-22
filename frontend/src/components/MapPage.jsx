@@ -1,7 +1,7 @@
 import BostonMapClean from "./BostonMapClean.jsx";
 import {useState} from "react";
 
-export default function MapWithStats() {
+export default function MapPage() {
     const [selectedZip, setSelectedZip] = useState(null);
 
     return (

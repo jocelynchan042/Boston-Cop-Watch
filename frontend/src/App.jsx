@@ -1,7 +1,7 @@
 import ChatPage from './components/ChatPage';
 import {Routes, Route} from "react-router-dom";
 import Home from "./components/Home";
-import Map from "./components/Map";
+import MapPage from "./components/MapPage";
 import Header from "./components/Header";
 import "./App.css";
 
@@ -16,7 +16,7 @@ export default function App() {
                     <main className="main">
                         <Routes>
                             <Route path="/" element={<Home/>}/>
-                            <Route path="/map" element={<Map/>}/>
+                            <Route path="/map" element={<MapPage/>}/>
                             <Route path="/chat" element={<ChatPage/>}/>
                         </Routes>
                         <footer className="footerLinks">
