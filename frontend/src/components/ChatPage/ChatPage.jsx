@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import {SUGGESTED_PROMPTS} from "./SUGGESTED_PROMPTS";
+import { SUGGESTED_PROMPTS } from "./SUGGESTED_PROMPTS";
 import "../../App.css";
 import "./ChatPage.css";
 
@@ -87,18 +87,7 @@ export default function ChatPage() {
   };
 
   return (
-      <>
-      <header className="header">
-            <button
-                className="mapBtn">
-                Boston Map
-            </button>
-
-            <button className="resetBtn" onClick={handleReset}>
-                ↺ Reset
-            </button>
-      </header>
-
+    <>
       <div className="body">
         <main className="main">
           <div className="messagesContainer">
@@ -112,17 +101,17 @@ export default function ChatPage() {
               >
                 {msg.role === "assistant" && <div className="avatar">⚖</div>}
                 <div
-                    className={`bubble ${
-                        msg.role === "user" ? "userBubble" : "assistantBubble"
-                    }`}
+                  className={`bubble ${
+                    msg.role === "user" ? "userBubble" : "assistantBubble"
+                  }`}
                 >
                   {msg.role === "assistant" ? (
                     <div className="markdown">
-                        <ReactMarkdown>{msg.content}</ReactMarkdown>
+                      <ReactMarkdown>{msg.content}</ReactMarkdown>
                     </div>
-                    ) : (
+                  ) : (
                     msg.content
-                    )}
+                  )}
                 </div>
               </div>
             ))}
@@ -132,7 +121,7 @@ export default function ChatPage() {
                 <div className="avatar">⚖</div>
                 <div className="bubble assistantBubble">
                   <div className="typingDots">
-                    <span className="dot" style={{animationDelay: "0s" }} />
+                    <span className="dot" style={{ animationDelay: "0s" }} />
                     <span className="dot" style={{ animationDelay: "0.2s" }} />
                     <span className="dot" style={{ animationDelay: "0.4s" }} />
                   </div>
@@ -143,7 +132,7 @@ export default function ChatPage() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* ✅ Dropdown BELOW the chat/messages (no free text input) */}
+          {/* Dropdown BELOW the chat/messages */}
           <div className="dropdownBar">
             <div className="dropdownLabel">Select a situation</div>
             <select
@@ -159,28 +148,14 @@ export default function ChatPage() {
                 </option>
               ))}
             </select>
-          </div>
 
-          <div className="footerLinks">
-            <a
-              href="https://nlgmass.org"
-              target="_blank"
-              rel="noreferrer"
-              className="link"
-            >
-              NLG MA
-            </a>
-            <span className="linkDot">·</span>
-            <a href="https://aclum.org" target="_blank" rel="noreferrer" className="link">
-              ACLU MA
-            </a>
-            <span className="linkDot">·</span>
-            <a href="https://macdl.com" target="_blank" rel="noreferrer" className="link">
-              MACDL
-            </a>
+            {/* Reset lives to the right of the dropdown */}
+            <button className="resetBtn resetChatBtn" onClick={handleReset}>
+              ↺ Reset Chat
+            </button>
           </div>
         </main>
       </div>
-      </>
+    </>
   );
 }

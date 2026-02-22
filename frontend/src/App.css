@@ -228,6 +228,10 @@
   cursor: pointer;
 }
 
+.resetChatBtn {
+  white-space: nowrap;
+}
+
 /* Footer */
 .footerLinks {
   width: 100vw;
