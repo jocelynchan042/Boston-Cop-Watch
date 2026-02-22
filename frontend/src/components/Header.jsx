@@ -5,7 +5,8 @@ export default function Header() {
     return(
         <>
             <header className="header">
-                <div className="headerLeft">
+                <Link className="headerLeft" to="/">
+                
                     <div className="logo">
                         <img src="\BosCopWatchLogo.png" alt="Boston Cop Watch Logo" className="logoImage"/>
                     </div>
@@ -13,12 +14,12 @@ export default function Header() {
                         <div className="logoTitle">Boston Cop Watch</div>
                         <div className="logoSub">Youth Focused · Know Your Rights · Boston, MA</div>
                     </div>
-                </div>
+                </Link>
                 <div className="headerRight">
                     <nav>
-                        <Link className="mapBtn" to="/">Home</Link>
-                        <Link className="mapBtn" to="/chat">Chat</Link>
-                        <Link className="mapBtn" to="/map">Map</Link>
+                        <Link className="navButton" to="/">Home</Link>
+                        <Link className="navButton" to="/chat">Chat</Link>
+                        <Link className="navButton" to="/map">Map</Link>
                     </nav>
 
                     <div className="disclaimer">
