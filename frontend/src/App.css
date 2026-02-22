@@ -138,7 +138,7 @@ nav {
 
 .landingHeader {
   font-family: 'DM Serif Display', serif;
-  font-size: 10vh;
+  font-size: 13vh;
   color: #0b1f3a;
   letter-spacing: 0.02em;
 }
@@ -151,13 +151,14 @@ nav {
 }
 
 .description {
-  color: #0b1f3a;
-  max-width: 600px;
+  color: #64748b;
+  max-width: 45%;
   margin-bottom: 4vh;
+  font-size: 1.3rem;
 }
 
 .homePageButton {
-  font-size: 16px;
+  font-size: 1rem;
   background: #0b1f3a;
   color: #ffffff;
   border-radius: 1000px;
