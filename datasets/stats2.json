@@ -1,0 +1,134 @@
+{
+  "incidents_by_zip_all": {
+    "summary": {
+      "top_3_zips": ["02124", "02121", "02118"],
+      "top_3_percent": 37.7,
+      "top_5_percent": 52.5
+    },
+    "data": [
+      { "zip": "02124", "incidents": 2608, "percent": 16.31 },
+      { "zip": "02121", "incidents": 1826, "percent": 11.42 },
+      { "zip": "02118", "incidents": 1598, "percent": 9.99 },
+      { "zip": "02119", "incidents": 1198, "percent": 7.49 },
+      { "zip": "02125", "incidents": 1171, "percent": 7.33 },
+      { "zip": "02122", "incidents": 863, "percent": 5.4 },
+      { "zip": "02128", "incidents": 839, "percent": 5.25 },
+      { "zip": "02111", "incidents": 673, "percent": 4.21 },
+      { "zip": "02126", "incidents": 649, "percent": 4.06 },
+      { "zip": "02130", "incidents": 623, "percent": 3.9 },
+      { "zip": "02108", "incidents": 535, "percent": 3.35 },
+      { "zip": "02136", "incidents": 483, "percent": 3.02 },
+      { "zip": "02116", "incidents": 448, "percent": 2.8 },
+      { "zip": "02127", "incidents": 408, "percent": 2.55 },
+      { "zip": "02129", "incidents": 403, "percent": 2.52 },
+      { "zip": "02110", "incidents": 310, "percent": 1.94 },
+      { "zip": "02114", "incidents": 287, "percent": 1.8 },
+      { "zip": "02120", "incidents": 207, "percent": 1.3 },
+      { "zip": "02135", "incidents": 124, "percent": 0.78 },
+      { "zip": "02115", "incidents": 112, "percent": 0.7 },
+      { "zip": "02131", "incidents": 109, "percent": 0.68 },
+      { "zip": "02215", "incidents": 107, "percent": 0.67 },
+      { "zip": "02109", "incidents": 96, "percent": 0.6 },
+      { "zip": "02134", "incidents": 57, "percent": 0.36 },
+      { "zip": "02132", "incidents": 40, "percent": 0.25 },
+      { "zip": "02113", "incidents": 33, "percent": 0.21 },
+      { "zip": "02210", "incidents": 27, "percent": 0.17 },
+      { "zip": "02203", "incidents": 24, "percent": 0.15 },
+      { "zip": "02139", "incidents": 7, "percent": 0.04 },
+      { "zip": "01970", "incidents": 7, "percent": 0.04 },
+      { "zip": "02180", "incidents": 6, "percent": 0.04 },
+      { "zip": "02151", "incidents": 6, "percent": 0.04 },
+      { "zip": "02186", "incidents": 4, "percent": 0.03 },
+      { "zip": "02446", "incidents": 3, "percent": 0.02 },
+      { "zip": "02301", "incidents": 3, "percent": 0.02 },
+      { "zip": "02492", "incidents": 2, "percent": 0.01 },
+      { "zip": "02458", "incidents": 2, "percent": 0.01 },
+      { "zip": "02302", "incidents": 2, "percent": 0.01 },
+      { "zip": "02133", "incidents": 2, "percent": 0.01 },
+      { "zip": "02081", "incidents": 2, "percent": 0.01 },
+      { "zip": "02031", "incidents": 2, "percent": 0.01 },
+      { "zip": "01960", "incidents": 2, "percent": 0.01 },
+      { "zip": "02635", "incidents": 1, "percent": 0.01 },
+      { "zip": "02467", "incidents": 1, "percent": 0.01 },
+      { "zip": "02100", "incidents": 1, "percent": 0.01 }
+    ]
+  },
+
+  "incidents_by_zip_juvenile_only": {
+    "summary": {
+      "top_zip": "02124",
+      "top_zip_percent": 20.25,
+      "top_3_percent": 41.5,
+      "top_5_percent": 55.5
+    },
+    "data": [
+      { "zip": "02124", "incidents": 272, "percent": 20.25 },
+      { "zip": "02121", "incidents": 178, "percent": 13.25 },
+      { "zip": "02118", "incidents": 107, "percent": 7.97 },
+      { "zip": "02125", "incidents": 97, "percent": 7.22 },
+      { "zip": "02122", "incidents": 91, "percent": 6.78 },
+      { "zip": "02130", "incidents": 90, "percent": 6.7 },
+      { "zip": "02128", "incidents": 75, "percent": 5.58 },
+      { "zip": "02136", "incidents": 72, "percent": 5.36 },
+      { "zip": "02119", "incidents": 72, "percent": 5.36 },
+      { "zip": "02126", "incidents": 51, "percent": 3.8 },
+      { "zip": "02129", "incidents": 46, "percent": 3.43 },
+      { "zip": "02127", "incidents": 36, "percent": 2.68 },
+      { "zip": "02116", "incidents": 22, "percent": 1.64 },
+      { "zip": "02135", "incidents": 21, "percent": 1.56 },
+      { "zip": "02120", "incidents": 17, "percent": 1.27 },
+      { "zip": "02110", "incidents": 15, "percent": 1.12 },
+      { "zip": "02111", "incidents": 13, "percent": 0.97 },
+      { "zip": "02131", "incidents": 11, "percent": 0.82 },
+      { "zip": "02108", "incidents": 11, "percent": 0.82 },
+      { "zip": "02134", "incidents": 8, "percent": 0.6 },
+      { "zip": "02113", "incidents": 7, "percent": 0.52 },
+      { "zip": "02199", "incidents": 6, "percent": 0.45 },
+      { "zip": "02115", "incidents": 5, "percent": 0.37 },
+      { "zip": "02114", "incidents": 5, "percent": 0.37 },
+      { "zip": "02215", "incidents": 4, "percent": 0.3 },
+      { "zip": "02180", "incidents": 4, "percent": 0.3 },
+      { "zip": "02132", "incidents": 2, "percent": 0.15 },
+      { "zip": "02458", "incidents": 1, "percent": 0.07 },
+      { "zip": "02139", "incidents": 1, "percent": 0.07 },
+      { "zip": "02109", "incidents": 1, "percent": 0.07 },
+      { "zip": "01970", "incidents": 1, "percent": 0.07 }
+    ]
+  },
+
+  "race_distribution_juvenile": {
+    "notes": [
+      "Percentages are of juvenile incidents"
+    ],
+    "data": [
+      { "race": "Black", "count": 903, "percent": 67.3 },
+      { "race": "White", "count": 232, "percent": 17.3 },
+      { "race": "Unknown", "count": 158, "percent": 11.8 },
+      { "race": "Other", "count": 41, "percent": 3.1 },
+      { "race": "Asian", "count": 6, "percent": 0.4 },
+      { "race": "Native American / Pacific Islander", "count": 2, "percent": 0.15 }
+    ]
+  },
+
+  "race_distribution_all": {
+    "notes": [
+      "Nearly 59% of all records (9,382) are missing race data (null).",
+      "Percentages below are among records with known race"
+    ],
+    "missing_race": {
+      "null_count": 9382,
+      "approx_percent_of_all_records": 59
+    },
+    "known_race_distribution": [
+      { "race": "Black", "count": 4368, "percent": 66.1 },
+      { "race": "White", "count": 1298, "percent": 19.6 },
+      { "race": "Unknown", "count": 742, "percent": 11.2 },
+      { "race": "Other", "count": 148, "percent": 2.2 },
+      { "race": "Asian", "count": 47, "percent": 0.7 },
+      { "race": "Native American / Pacific Islander", "count": 3, "percent": 0.05 }
+    ]
+  
+
+
+}
+}
