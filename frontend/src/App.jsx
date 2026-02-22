@@ -1,7 +1,7 @@
-import ChatPage from './components/ChatPage';
+import ChatPage from './components/ChatPage/ChatPage';
 import {Routes, Route} from "react-router-dom";
 import Home from "./components/Home";
-import MapPage from "./components/MapPage";
+import MapPage from "./components/MapPage/MapPage";
 import Header from "./components/Header";
 import "./App.css";
 

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import {SUGGESTED_PROMPTS} from "./SUGGESTED_PROMPTS";
-import "../App.css";
+import "../../App.css";
 import "./ChatPage.css";
 
 const API_BASE = "http://127.0.0.1:8000";

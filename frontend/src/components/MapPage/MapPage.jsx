@@ -1,4 +1,4 @@
-import BostonMapClean from "./BostonMapClean.jsx";
+import BostonMap from "./BostonMap.jsx";
 import {useState} from "react";
 
 export default function MapPage() {
@@ -6,7 +6,10 @@ export default function MapPage() {
 
     return (
         <div style={{ display: "flex", height:"100vh"}}>
-            <BostonMapClean onZipSelect={setSelectedZip} />
+            <div style={{ padding: "5%", width: "70%" }}>
+                <BostonMap onZipSelect={setSelectedZip} />
+            </div>
+
 
             <div style={{ padding: "5%", width: "30%" }}>
                 <h2>Selected ZIP</h2>

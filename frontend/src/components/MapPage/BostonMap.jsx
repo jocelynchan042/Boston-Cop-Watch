@@ -4,7 +4,7 @@ import {useState} from "react";
 
 const geoUrl = "/boston_zips.geojson";
 
-export default function BostonMapClean({ onZipSelect }) {
+export default function BostonMap({ onZipSelect }) {
     const [selectedZip, setSelectedZip] = useState(null);
 
     const handleSelect = (zip) => {
@@ -19,7 +19,6 @@ export default function BostonMapClean({ onZipSelect }) {
                 center: [-71.0589, 42.3101],
                 scale: 170000
             }}
-            style={{ width: "100%", height: "100%" }}
         >
             <Geographies geography={geoUrl}>
                 {({ geographies }) => (
