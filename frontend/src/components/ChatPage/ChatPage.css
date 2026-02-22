@@ -21,3 +21,15 @@ button:hover { opacity: 0.85; }
 .markdown li { margin: 4px 0; }
 .markdown h1, .markdown h2, .markdown h3 { margin: 10px 0 6px; }
 .markdown a { color: #6a9a6a; text-decoration: underline; }
+
+.body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
