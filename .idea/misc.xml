@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EclipseCodeFormatterProjectSettings">
+    <option name="projectSpecificProfile">
+      <ProjectSpecificProfile>
+        <option name="eclipseVersion" value="CUSTOM" />
+        <option name="enableGWT" value="true" />
+        <option name="formatter" value="ECLIPSE" />
+        <option name="pathToConfigFileJS" value="$USER_HOME$/workspace/vericle/.settings/org.eclipse.wst.jsdt.core.prefs" />
+        <option name="pathToConfigFileJava" value="$USER_HOME$/workspace/vericle/.settings/org.eclipse.jdt.core.prefs" />
+        <option name="pathToEclipse" value="$USER_HOME$/opt/eclipse-jee-oxygen-3a" />
+      </ProjectSpecificProfile>
+    </option>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Google App Engine (Python)</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java EE</id>
+          </State>
+          <State>
+            <id>PerformanceJava</id>
+          </State>
+          <State>
+            <id>PortabilityJava</id>
+          </State>
+          <State>
+            <id>Resource managementJava</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Angular</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="SaveActionSettings">
+    <option name="actions">
+      <set>
+        <option value="activate" />
+        <option value="reformat" />
+      </set>
+    </option>
+    <option name="configurationPath" value="$USER_HOME$/workspace/vericle/prefs/eclipse_prefs.epf" />
+  </component>
+</project>
