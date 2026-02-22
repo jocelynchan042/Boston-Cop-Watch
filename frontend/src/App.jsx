@@ -20,7 +20,9 @@ export default function App() {
                             <Route path="/chat" element={<ChatPage/>}/>
                         </Routes>
                         <footer className="footerLinks">
-                                <a
+                            <h3>Relevant Resources:</h3>
+
+                            <a
                                     href="https://nlgmass.org"
                                     target="_blank"
                                     rel="noreferrer"

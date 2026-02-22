@@ -54,8 +54,8 @@ export default function QuickStats({zip}) {
 
     return(
         <>
-            <div style={{width: "100%", height: "100%", display:"flex", flexDirection:"column", gap:"3%"}}>
-                <div style={{width: "100%", height: "30%"}}>
+            <div style={{width: "100%", display:"flex", flexDirection:"column", gap:"3%"}}>
+                <div style={{width: "100%"}}>
                 <div style={{width: "100%"}}>
                     <h1>Stops by Zip Code</h1>
                     <h3>Click a Zip Code Area to Show Data</h3>
@@ -69,7 +69,8 @@ export default function QuickStats({zip}) {
                     <p># Reports of Alleged Misconduct: {numIncidents !== null ? numIncidents : "Loading..."}</p>
                 </div>
                 </div>
-                <div style={{width: "100%", height: "50%"}}>
+
+                <div style={{width: "100%", display:"flex", flexDirection:"column", gap:"3%"}}>
                 <div className="chart-card">
                     <h3>All Boston Stops by Race (%) (2022-2025)</h3>
                     <div className="chart-wrapper">
@@ -77,13 +78,16 @@ export default function QuickStats({zip}) {
                             <BarChart data={raceData}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey="race"
-                                       angle={-45}
+                                       angle={-15}
                                        textAnchor="end"
                                        interval={0}
-                                       fontSize=".9rem"
+                                       fontSize=".4rem"
                                 />
 
-                                <YAxis />
+                                <YAxis
+                                    domain={[0, 100]}
+                                    allowDataOverflow={false}
+                                />
                                 <Tooltip />
                                 <Legend />
                                 <Bar dataKey="percent"
@@ -97,14 +101,19 @@ export default function QuickStats({zip}) {
                     <div className="chart-card">
                         <h3>All Boston Juvenile Stops by Race (%) (2022-2025)</h3>
                         <div className="chart-wrapper">
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer width="100%" height="100%" >
                         <BarChart data={raceJuvenileData}>
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="race"
-                                   angle={-45}
+                                   angle={-15}
                                    textAnchor="end"
-                                   interval={0}/>
-                            <YAxis />
+                                   interval={0}
+                                   fontSize=".4rem"
+                            />
+                            <YAxis
+                                domain={[0, 100]}
+                                allowDataOverflow={false}
+                            />
                             <Tooltip />
                             <Bar dataKey="percent"
                                  fill="#1e3a8a"

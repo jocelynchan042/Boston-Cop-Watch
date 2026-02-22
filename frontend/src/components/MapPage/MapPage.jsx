@@ -8,7 +8,7 @@ export default function MapPage() {
     return (
         <div style={{ display: "flex", height:"100vh", gap:"2%", padding:"2%", paddingTop:"4%"}}>
                 <BostonMap onZipSelect={setSelectedZip} />
-            <div style={{width: "30%" }}>
+            <div style={{width: "30%", height:"100%" }}>
                 <QuickStats zip={selectedZip} />
             </div>
         </div>
