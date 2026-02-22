@@ -17,7 +17,7 @@ export default function BostonMap({ onZipSelect }) {
             projection="geoMercator"
             projectionConfig={{
                 center: [-71.0589, 42.3101],
-                scale: 170000
+                scale: 140000
             }}
         >
             <Geographies geography={geoUrl}>

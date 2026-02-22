@@ -56,7 +56,7 @@ export function ZipGeography({geo, selectedZip, onSelect}) {
                 <Marker coordinates={centroid}>
                     <text
                         textAnchor="middle"
-                        fontSize="0.9em"
+                        fontSize="0.7em"
                         fill="#000"
                         style={{pointerEvents: "none"}}
                     >
