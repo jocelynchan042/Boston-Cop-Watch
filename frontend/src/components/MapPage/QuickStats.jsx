@@ -71,7 +71,7 @@ export default function QuickStats({zip}) {
                 </div>
 
                 <div style={{width: "100%", display:"flex", flexDirection:"column", gap:"3%"}}>
-                <div className="chart-card">
+                {/* <div className="chart-card">
                     <h3>All Boston Stops by Race (%) (2022-2025)</h3>
                     <div className="chart-wrapper">
                         <ResponsiveContainer width="100%" height="100%">
@@ -97,7 +97,7 @@ export default function QuickStats({zip}) {
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
-                </div>
+                </div> */}
                     <div className="chart-card">
                         <h3>All Boston Juvenile Stops by Race (%) (2022-2025)</h3>
                         <div className="chart-wrapper">
