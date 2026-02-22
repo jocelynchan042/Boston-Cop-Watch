@@ -23,6 +23,4 @@ SELECT contact_officer_name
 FROM bpi_fio_record
 WHERE key_situations LIKE '%Juvenile%'
 
-
-
 '''
