@@ -1,8 +1,13 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .page {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: #cbd7e8;
   color: #0f172a;
   font-family: "DM Mono", monospace;
@@ -39,6 +44,21 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* Make nav items transformable */
+.headerRight a,
+.headerRight .navBtn,
+.headerRight button {
+  display: inline-block;
+  transition: transform 0.15s ease;
+  transform-origin: center;
+}
+
+.headerRight a:hover,
+.headerRight .navBtn:hover,
+.headerRight button:hover {
+  transform: scale(1.05);
 }
 
 .logo {
@@ -78,6 +98,16 @@
   cursor: pointer;
   font-family: 'DM Mono', monospace;
   margin-right: 8px;
+  transition: transform 0.15s ease;
+}
+
+.navBtn {
+  transition: transform 0.15s ease;
+}
+
+.mapBtn:hover,
+.navBtn:hover {
+  transform: scale(1.05);
 }
 
 .disclaimer {
@@ -107,12 +137,14 @@
   display: flex;
   flex: 1;
   z-index: 1;
+  min-height: 0;
 }
 
 .main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 /* Messages */
@@ -128,6 +160,7 @@
   margin: 0 auto;
   align-self: center;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .messageRow {
@@ -234,7 +267,7 @@
 
 /* Footer */
 .footerLinks {
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

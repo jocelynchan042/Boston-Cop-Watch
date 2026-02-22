@@ -28,7 +28,7 @@ export default function ChatPage() {
     // Track which dropdown item was used (so the dropdown keeps the selected value)
     setSelectedPrompt(String(promptObj.id));
 
-    const userMessage = { role: "user", content: promptObj.label };
+    const userMessage = { role: "user", content: promptObj.prompt };
     const updatedMessages = [...messages, userMessage];
     setMessages(updatedMessages);
     setLoading(true);
