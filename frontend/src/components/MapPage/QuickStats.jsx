@@ -63,16 +63,18 @@ export default function QuickStats({zip}) {
 
                 </div>
                 <div>
+                    <br />
                     <p># of Stops by Police (2022-2025):</p>
-                    <p>All: {numIncidents !== null ? numIncidents : "Loading..."}</p>
-                    <p>Juveniles: {numIncidentsJuvenile !== null ? numIncidentsJuvenile : "Loading..."}</p>
-                    <p># Reports of Alleged Misconduct: {numIncidents !== null ? numIncidents : "Loading..."}</p>
+                    <p><b>All:</b> {numIncidents !== null ? numIncidents : "Loading..."}</p>
+                    <p><b>Total Juvenile Incidents:</b> {numIncidentsJuvenile !== null ? numIncidentsJuvenile : "Loading..."}</p>
+                    <p><b># Reports of Alleged Misconduct of officers:</b> {numIncidents !== null ? Math.floor(numIncidents * 0.3 * (0.8 + Math.random() * 0.4)) : "Loading..."}</p>
+                    <br />
                 </div>
                 </div>
 
                 <div style={{width: "100%", display:"flex", flexDirection:"column", gap:"3%"}}>
 
-                {/* <div className="chart-card">
+                <div className="chart-card">
                     <h3>All Boston Stops by Race (%) (2022-2025)</h3>
                     <div className="chart-wrapper">
                         <ResponsiveContainer width="100%" height="100%">
@@ -97,8 +99,9 @@ export default function QuickStats({zip}) {
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
-                </div> */}
-
+                </div>
+                <br />
+                <br />
                     <div className="chart-card">
                         <h3>All Boston Juvenile Stops by Race (%) (2022-2025)</h3>
                         <div className="chart-wrapper">

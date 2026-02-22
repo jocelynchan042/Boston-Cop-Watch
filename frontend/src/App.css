@@ -12,7 +12,7 @@ html, body, #root {
   color: #0f172a;
   font-family: "DM Mono", monospace;
   position: relative;
-  overflow-y:auto;
+  overflow-y: auto; /* revert */
 }
 
 .bgGrain {
@@ -47,13 +47,12 @@ html, body, #root {
   align-items: center;
   gap: 12px;
 }
+
 nav {
   display: flex;
   width: 100%;
   gap: 3%;
 }
-
-
 
 /* Make nav items transformable */
 .headerRight a,
@@ -70,7 +69,6 @@ nav {
   transform: scale(1.05);
 }
 
-.logo
 .logo {
   font-size: 22px;
   width: 40px;
@@ -120,7 +118,6 @@ nav {
   transition: transform 0.15s ease;
 }
 
-
 /* Homepage Styling */
 .landingPage {
   display: flex;
@@ -128,9 +125,10 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
-  flex: 1;       
+  flex: 1;
   width: 100%;
   box-sizing: border-box;
+  min-height: 0; /* helps if nested */
 }
 
 .landingBadge {
@@ -181,8 +179,6 @@ nav {
   background: #1a3a6b;
 }
 
-
-
 .mapBtn:hover,
 .navBtn:hover {
   transform: scale(1.05);
@@ -216,7 +212,7 @@ nav {
   flex: 1;
   z-index: 1;
   min-height: 0;
-  height: 100%
+  min-width: 0;
 }
 
 .main {
@@ -224,13 +220,15 @@ nav {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  height: 100%
+  min-width: 0;
 }
 
 /* Messages */
 .messagesContainer {
   flex: 1;
-  overflow-y: auto;
+  min-height: 0;       /* key: allows this area to scroll in flex */
+  overflow-y: auto;    /* key: scrolling happens here */
+  overflow-x: hidden;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -240,7 +238,6 @@ nav {
   margin: 0 auto;
   align-self: center;
   box-sizing: border-box;
-  overflow-y: auto;
 }
 
 .messageRow {
@@ -248,6 +245,9 @@ nav {
   align-items: flex-start;
   gap: 10px;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .avatar {
@@ -265,11 +265,19 @@ nav {
 
 .bubble {
   max-width: 80%;
+  min-width: 0;
   padding: 12px 16px;
   border-radius: 10px;
   font-size: 13px;
   line-height: 1.7;
+
+  /* wrapping rules to prevent overflow */
   white-space: pre-wrap;
+  overflow-wrap: anywhere; /* stronger than break-word for long tokens */
+  word-break: break-word;
+
+  /* IMPORTANT: don't hide content; let code blocks handle their own scroll */
+  overflow: visible;
 }
 
 .assistantBubble {
@@ -284,6 +292,31 @@ nav {
   border: 1px solid #142f57;
   color: #ffffff;
   border-top-right-radius: 2px;
+}
+
+/* Markdown safety */
+.markdown {
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.markdown * {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Code blocks: prevent horizontal overflow from blowing out the page */
+.markdown pre {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre; /* code stays code */
+}
+
+.markdown code {
+  max-width: 100%;
 }
 
 /* Typing dots */
@@ -319,6 +352,7 @@ nav {
   display: flex;
   gap: 12px;
   align-items: center;
+  flex-shrink: 0; /* keep pinned, chat scrolls above */
 }
 
 .dropdownLabel {
@@ -349,6 +383,7 @@ nav {
 .mapPageLayout {
   flex: 1;
   min-height: 0;              /* critical for nested flex scroll */
+  min-width: 0;
   display: flex;
   gap: 16px;
   padding: 16px;
@@ -392,4 +427,3 @@ nav {
 .linkDot {
   color: #94a3b8;
 }
-
