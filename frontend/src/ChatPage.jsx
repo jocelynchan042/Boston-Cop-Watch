@@ -159,10 +159,20 @@ export default function ChatPage() {
           </div>
         </div>
         <div style={styles.headerRight}>
-          <div style={styles.disclaimer}>Not legal advice · For information only</div>
-          <button style={styles.resetBtn} onClick={handleReset}>
-            ↺ Reset
-          </button>
+            <button
+                style={styles.mapBtn}
+                onClick={() => console.log("Boston Map page coming soon")}
+            >
+                Boston Map
+            </button>
+
+            <div style={styles.disclaimer}>
+                Not legal advice · For information only
+            </div>
+
+            <button style={styles.resetBtn} onClick={handleReset}>
+                ↺ Reset
+            </button>
         </div>
       </header>
 
@@ -259,6 +269,10 @@ export default function ChatPage() {
             0%, 80%, 100% { transform: translateY(0); }
             40% { transform: translateY(-6px); }
         }
+            
+        button:hover {
+          transform: scale(1.05);
+        }
 
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: transparent; }
@@ -330,6 +344,17 @@ const styles = {
     letterSpacing: "0.08em",
     textTransform: "uppercase",
   },
+  mapBtn: {
+    fontSize: "12px",
+    background: "#0b1f3a",
+    color: "#ffffff",
+    border: "1px solid #142f57",
+    borderRadius: "4px",
+    padding: "6px 12px",
+    cursor: "pointer",
+    fontFamily: "'DM Mono', monospace",
+    marginRight: "8px",
+},
   disclaimer: {
     fontSize: "13px",
     color: "#1e4ed8",
