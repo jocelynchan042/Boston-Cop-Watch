@@ -6,7 +6,9 @@ export default function Header() {
         <>
             <header className="header">
                 <div className="headerLeft">
-                    <div className="logo">⚖</div>
+                    <div className="logo">
+                        <img src="\BosCopWatchLogo.png" alt="Boston Cop Watch Logo" className="logoImage"/>
+                    </div>
                     <div>
                         <div className="logoTitle">Boston Cop Watch</div>
                         <div className="logoSub">Youth Focused · Know Your Rights · Boston, MA</div>
